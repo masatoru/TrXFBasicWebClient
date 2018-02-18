@@ -27,6 +27,14 @@ namespace TrXFBasicWebClient.WinForms
         /// <param name="e"></param>
         private async void SummaryForm_Load(object sender, EventArgs e)
         {
+            await UpdatePersonList();
+        }
+
+        /// <summary>
+        /// リストの内容を表示する
+        /// </summary>
+        async Task UpdatePersonList()
+        {
             var webPeople = await WebApiClient.Instance.GetPeopleAsync();
 
             peopleList.Items.Clear();
@@ -60,6 +68,23 @@ namespace TrXFBasicWebClient.WinForms
             {
                 var selectPerson = (Person)peopleList.SelectedItem;
                 if (new DetailForm(selectPerson).ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+        }
+
+        /// <summary>
+        /// データをすべて削除する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void clearButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("データをすべて削除します\nよろしいですか？", "確認", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                var webPeople = await WebApiClient.Instance.GetPeopleAsync();
+                foreach (var person in webPeople)
                 {
 
                 }

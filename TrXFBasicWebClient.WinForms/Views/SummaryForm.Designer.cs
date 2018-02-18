@@ -67,6 +67,7 @@
             this.clearButton.TabIndex = 1;
             this.clearButton.Text = "Clear All Data";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // addButton
             // 
