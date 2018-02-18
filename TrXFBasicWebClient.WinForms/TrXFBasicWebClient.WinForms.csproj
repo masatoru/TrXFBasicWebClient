@@ -55,8 +55,6 @@
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ApiKeysSample.cs" />
-    <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\WebApiClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -84,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrXFBasicWebClient.Core\TrXFBasicWebClient.Core.csproj">
+      <Project>{4c3d915c-b929-4615-84b7-2bc4a6be115d}</Project>
+      <Name>TrXFBasicWebClient.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
