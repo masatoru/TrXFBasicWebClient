@@ -39,12 +39,13 @@
             // 
             this.peopleList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peopleList.FormattingEnabled = true;
-            this.peopleList.ItemHeight = 19;
+            this.peopleList.ItemHeight = 29;
             this.peopleList.Location = new System.Drawing.Point(0, 0);
-            this.peopleList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.peopleList.Margin = new System.Windows.Forms.Padding(5);
             this.peopleList.Name = "peopleList";
             this.peopleList.Size = new System.Drawing.Size(579, 516);
             this.peopleList.TabIndex = 0;
+            this.peopleList.SelectedIndexChanged += new System.EventHandler(this.peopleList_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -52,7 +53,7 @@
             this.panel1.Controls.Add(this.addButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 445);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(579, 71);
             this.panel1.TabIndex = 1;
@@ -60,7 +61,7 @@
             // clearButton
             // 
             this.clearButton.Location = new System.Drawing.Point(263, 16);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(5);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(237, 36);
             this.clearButton.TabIndex = 1;
@@ -70,22 +71,23 @@
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(20, 16);
-            this.addButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.addButton.Margin = new System.Windows.Forms.Padding(5);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(233, 36);
             this.addButton.TabIndex = 0;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // SummaryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 516);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.peopleList);
             this.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SummaryForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.SummaryForm_Load);
