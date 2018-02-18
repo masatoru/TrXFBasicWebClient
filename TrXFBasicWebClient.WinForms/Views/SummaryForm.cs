@@ -49,11 +49,11 @@ namespace TrXFBasicWebClient.WinForms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void addButton_Click(object sender, EventArgs e)
+        private async void addButton_Click(object sender, EventArgs e)
         {
             if (new DetailForm(null).ShowDialog() == DialogResult.OK)
             {
-
+                await UpdatePersonList();
             }
         }
 
@@ -62,14 +62,14 @@ namespace TrXFBasicWebClient.WinForms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void peopleList_SelectedIndexChanged(object sender, EventArgs e)
+        private async void peopleList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (peopleList.SelectedItem != null)
             {
                 var selectPerson = (Person)peopleList.SelectedItem;
                 if (new DetailForm(selectPerson).ShowDialog() == DialogResult.OK)
                 {
-
+                    await UpdatePersonList();
                 }
             }
         }
@@ -89,7 +89,7 @@ namespace TrXFBasicWebClient.WinForms
                     await WebApiClient.Instance.DeletePersonAsync(person);
                 }
 
-                UpdatePersonList();
+                await UpdatePersonList();
             }
         }
     }

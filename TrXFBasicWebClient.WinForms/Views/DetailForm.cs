@@ -19,7 +19,6 @@ namespace TrXFBasicWebClient.WinForms.Views
         {
             InitializeComponent();
             Current = person;
-            edtId.Enabled = false;
         }
 
         /// <summary>
@@ -29,6 +28,7 @@ namespace TrXFBasicWebClient.WinForms.Views
         /// <param name="e"></param>
         private void DetailForm_Load(object sender, EventArgs e)
         {
+            edtId.Enabled = false;
             if (Current != null)
             {
                 edtId.Text = Current.Id.ToString();
@@ -38,12 +38,45 @@ namespace TrXFBasicWebClient.WinForms.Views
             else
             {
                 edtId.Text = "0";
+                btnDelete.Enabled = false;
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 保存する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnSave_Click(object sender, EventArgs e)
         {
+            var newPerson = new Person
+            {
+                Name = edtName.Text,
+                Birthday = dateTimeBirthday.Value
+            };
+            if (Current==null)
+            {
+                // 新規追加
+                await WebApiClient.Instance.PostPersonAsync(newPerson);
+            }
+            else
+            {
+                // 更新
+                await WebApiClient.Instance.UpdatePersonAsync(newPerson);
+            }
 
+            DialogResult = DialogResult.OK;
+        }
+
+        /// <summary>
+        /// 削除する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            await WebApiClient.Instance.DeletePersonAsync(Current);
+            DialogResult = DialogResult.OK;
         }
     }
 }
