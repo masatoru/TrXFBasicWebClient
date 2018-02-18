@@ -83,11 +83,13 @@ namespace TrXFBasicWebClient.WinForms
         {
             if (MessageBox.Show("データをすべて削除します\nよろしいですか？", "確認", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                var webPeople = await WebApiClient.Instance.GetPeopleAsync();
-                foreach (var person in webPeople)
+                var people = await WebApiClient.Instance.GetPeopleAsync();
+                foreach (var person in people)
                 {
-
+                    await WebApiClient.Instance.DeletePersonAsync(person);
                 }
+
+                UpdatePersonList();
             }
         }
     }

@@ -33,10 +33,10 @@
             this.edtId = new System.Windows.Forms.TextBox();
             this.edtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.edtBirthday = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.dateTimeBirthday = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -71,13 +71,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // edtBirthday
-            // 
-            this.edtBirthday.Location = new System.Drawing.Point(153, 156);
-            this.edtBirthday.Name = "edtBirthday";
-            this.edtBirthday.Size = new System.Drawing.Size(377, 35);
-            this.edtBirthday.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -95,6 +88,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -105,14 +99,21 @@
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // dateTimeBirthday
+            // 
+            this.dateTimeBirthday.Location = new System.Drawing.Point(153, 159);
+            this.dateTimeBirthday.Name = "dateTimeBirthday";
+            this.dateTimeBirthday.Size = new System.Drawing.Size(200, 35);
+            this.dateTimeBirthday.TabIndex = 8;
+            // 
             // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 551);
+            this.Controls.Add(this.dateTimeBirthday);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.edtBirthday);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edtName);
             this.Controls.Add(this.label2);
@@ -136,9 +137,9 @@
         private System.Windows.Forms.TextBox edtId;
         private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox edtBirthday;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DateTimePicker dateTimeBirthday;
     }
 }

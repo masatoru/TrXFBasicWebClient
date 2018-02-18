@@ -19,6 +19,7 @@ namespace TrXFBasicWebClient.WinForms.Views
         {
             InitializeComponent();
             Current = person;
+            edtId.Enabled = false;
         }
 
         /// <summary>
@@ -32,12 +33,17 @@ namespace TrXFBasicWebClient.WinForms.Views
             {
                 edtId.Text = Current.Id.ToString();
                 edtName.Text = Current.Name;
-                edtBirthday.Text = Current.Birthday.ToString("yyyy/MM/dd");
+                dateTimeBirthday.Value = Current.Birthday.DateTime;
             }
             else
             {
                 edtId.Text = "0";
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
