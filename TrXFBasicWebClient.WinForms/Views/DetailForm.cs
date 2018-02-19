@@ -69,7 +69,7 @@ namespace TrXFBasicWebClient.WinForms.Views
         }
 
         /// <summary>
-        /// 削除する TEST
+        /// 削除する TEST2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
