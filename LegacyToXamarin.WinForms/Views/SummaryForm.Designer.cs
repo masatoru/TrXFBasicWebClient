@@ -1,4 +1,4 @@
-﻿namespace TrXFBasicWebClient.WinForms
+﻿namespace LegacyToXamarin.WinForms
 {
     partial class SummaryForm
     {

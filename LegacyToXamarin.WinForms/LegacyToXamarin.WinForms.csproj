@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76934EE2-DC31-4A86-ACBA-50014C7336FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TrXFBasicWebClient.WinForms</RootNamespace>
-    <AssemblyName>TrXFBasicWebClient.WinForms</AssemblyName>
+    <RootNamespace>LegacyToXamarin.WinForms</RootNamespace>
+    <AssemblyName>LegacyToXamarin</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -76,6 +76,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
@@ -98,9 +99,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrXFBasicWebClient.Core\TrXFBasicWebClient.Core.csproj">
+    <ProjectReference Include="..\LegacyToXamarin.Core\LegacyToXamarin.Core.csproj">
       <Project>{4c3d915c-b929-4615-84b7-2bc4a6be115d}</Project>
-      <Name>TrXFBasicWebClient.Core</Name>
+      <Name>LegacyToXamarin.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

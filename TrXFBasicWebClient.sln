@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrXFBasicWebClient.WinForms", "TrXFBasicWebClient.WinForms\TrXFBasicWebClient.WinForms.csproj", "{76934EE2-DC31-4A86-ACBA-50014C7336FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyToXamarin.WinForms", "LegacyToXamarin.WinForms\LegacyToXamarin.WinForms.csproj", "{76934EE2-DC31-4A86-ACBA-50014C7336FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrXFBasicWebClient.Core", "TrXFBasicWebClient.Core\TrXFBasicWebClient.Core.csproj", "{4C3D915C-B929-4615-84B7-2BC4A6BE115D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyToXamarin.Core", "LegacyToXamarin.Core\LegacyToXamarin.Core.csproj", "{4C3D915C-B929-4615-84B7-2BC4A6BE115D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

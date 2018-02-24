@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrXFBasicWebClient.WinForms.Views;
-using XFBasicWebClient.Models;
+using LegacyToXamarin.WinForms.Views;
+using LegacyToXamarin.Models;
 
-namespace TrXFBasicWebClient.WinForms
+namespace LegacyToXamarin.WinForms
 {
+    using LegacyToXamarin.WinForms.Views;
+
     public partial class SummaryForm : Form
     {
         public SummaryForm()

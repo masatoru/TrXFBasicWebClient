@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace XFBasicWebClient.Models
+namespace LegacyToXamarin.Models
 {
     public class Person
     {

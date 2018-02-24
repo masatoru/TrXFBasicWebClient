@@ -1,4 +1,4 @@
-﻿namespace TrXFBasicWebClient.WinForms.Views
+﻿namespace LegacyToXamarin.WinForms.Views
 {
     partial class DetailForm
     {
